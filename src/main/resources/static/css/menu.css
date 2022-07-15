@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-    background-color: red;
+    background-color: #076af0;
     height: 80px;
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@ body {
 
 .nav-menu {
     display: flex;
-    text-decoration: none;
+    list-style: none;
     margin-right: 40px;
 }
 
@@ -50,19 +50,19 @@ body {
 }
 
 .nav-menu-link{
-    color: black;
+    color: white;
     text-decoration: none;
     
 }
 
 .nav-menu-link:hover{
     font-size: 32px;
-    background-color: whitesmoke;
+    background-color: black;
     transition: 1s;
 }
 
 .footer{
-    background-color: black;
+    background-color:black;
     text-align: center;
     height: 20px;
     position: fixed;
@@ -73,8 +73,7 @@ body {
 }
 
 .contenido{
-    background-color:lightsteelblue;
-
+    background-color:wheat;
     position: fixed;
     top: 80px;
     left: 0;

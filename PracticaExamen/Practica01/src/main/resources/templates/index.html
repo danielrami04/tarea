@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head>
+        <title>NuevosProductos</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1> Informacion sobre paises del mundo </h1>
+        <a th:href="@{/nuevoProducto}">Nuevo Producto</a>
+         <!--
+         Variable si lo si
+         -->
+        <div th:if="${estados != null and !estados.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Fecha De Ingreso</th>
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                      
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="producto : ${productos}">
+                    <td th:text="${producto.productos}"></td>
+                    <td th:text="${producto.precio}"></td>
+                    <td th:text="${producto.fechaingreso}"></td>
+                    <td><a th:href="@{/eliminarProducto/}+${producto.idproducto}">Eliminar</a></td>
+                    <td><a th:href="@{/modificarProducto/}+${estado.idproducto}">Modificar</a></td>  
+                </tr>
+            </tbody>
+        </table>
+        </div>
+         <div th:if="${productos == null or estados.empty}">
+             No existe informacion
+         </div>
+    </body>  
+</html>

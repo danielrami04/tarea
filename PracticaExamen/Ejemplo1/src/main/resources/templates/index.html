@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Practica01</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Paises </h1>
+        <div th:if="${pais !=null and !pais.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Capital</th>
+                    <th>Poblacion</th>
+                    <th>Costas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pais: ${pais}">
+                    <td th:text="${pais.nombre}"></td>
+                    <td th:text="${pais.Capital}"></td>
+                    <td th:text="${pais.Poblacion}"></td>
+                    <td th:text="${pais.Costas}"></td>
+                </tr>
+             </tbody>
+        </table>
+         </div>
+       <!--
+ESTRUCTURA ELSE
+-->
+        <div th:if="${pais == null or paises.empty}">
+            No tenemos lista de clientes a mostrar...
+        </div>
+    </body>
+</html>

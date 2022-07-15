@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head>
+        <title>Notas</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1> Informacion sobre Notas </h1>
+        <a th:href="@{/nuevanota}">Nueva nota</a>
+         <!--
+         Variable si lo si
+         -->
+        <div th:if="${publicaciones != null and !publicaciones.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Paginas</th>
+                    <th>Fecha de publicacion</th
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                      
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="publicacion : ${publicaciones}">
+                    <td th:text="${publicacion.titulo}"></td>
+                    <td th:text="${publicacion.paginas}"></td>
+                    <td th:text="${publicacion.fecha_publicacion}"></td> 
+                    <td><a th:href="@{/eliminarNota/}+${publicacion.id_publicacion}">Eliminar</a></td>
+                    <td><a th:href="@{/modificarPais/}+${estado.id_publicacion}">Modificar</a></td>  
+                </tr>
+            </tbody>
+        </table>
+        </div>
+         <div th:if="${publicaciones == null or publicaciones.empty}">
+             No existe informacion
+         </div>
+    </body>  
+</html>

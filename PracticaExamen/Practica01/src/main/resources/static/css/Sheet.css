@@ -1,0 +1,55 @@
+
+
+#encabezado{
+    background-color: red;
+    color: whitesmoke;
+    text-align: center
+}
+
+.articulo{
+    background-color: black;
+    font-family: sans-serif;
+    color:crimson
+    
+}
+
+.header{
+    background-color: red;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+body{
+    font-family:  sans-serif;
+    
+}
+
+.header{
+    background-color: #00ccff;
+    height: 80px; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}

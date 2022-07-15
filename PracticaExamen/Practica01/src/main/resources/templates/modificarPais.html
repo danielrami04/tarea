@@ -1,0 +1,27 @@
+<head>
+        <title>Productos</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Datos sobre Productos</h1>
+        <a th:href="@{/}">Regresar</a>
+        <hr>
+        <form th:action="@{/guardarProducto}"
+              method="post"
+              th:object="${producto}">
+            <input type="hidden" name="idproducto" th:field="*{idproducto}"/>
+            
+            <label for="producto">Producto:</label>
+            <input type="text" name="producto" th:field="*{producto}"/>
+            <br>
+            <label for="precio">Precio:</label>
+            <input type="text" name="precio" th:field="*{precio}"/>
+             <br>
+            <label for="fechaingreso">Fecha de Ingreso:</label>
+            <input type="text" name="fechaingreso" th:field="*{fechaingreso}"/>
+             
+            <hr>
+            <input type="submit" name="guardar" value="Guardar"/>
+        </form>
+    </body>  
+</html>

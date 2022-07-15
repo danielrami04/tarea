@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Paises</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <a href="index.html"></a>
+        <h1>Paises del mundo</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="practica01 : ${practicas}">
+                    <td th:text="${practica01.nombre}"></td>
+                    <td th:text="${practica01.capital}"></td>
+                    <td th:text="${practica01.poblacion}"></td>
+                    <td th:text="${practica01.cantEstados}"></td>
+                    <td th:text="${practica01.moneda}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+

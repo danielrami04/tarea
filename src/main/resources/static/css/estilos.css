@@ -26,15 +26,15 @@ h2 {
 }
 
 p span {
-    color: blue;
+    color: black;
 }
 
 a:hover {
     background-color: red;
-    color: white;
+    color: black;
 }
 
 a {
     background-color: blue;
-    color: yellow;
+    color: red;
 }
